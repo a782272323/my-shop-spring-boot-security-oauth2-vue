@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>learn.lhb</groupId>
+        <artifactId>my-shop-spring-boot-security-oauth2-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../my-shop-spring-boot-security-oauth2-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>my-shop-spring-boot-security-oauth2-commons</artifactId>
+    <packaging>jar</packaging>
+
+    <name>my-shop-spring-boot-security-oauth2-commons</name>
+    <description></description>
+
+    <dependencies>
+
+        <!-- Spring Boot Begin -->
+
+        <!-- Spring Boot End -->
+
+    </dependencies>
+
+    <!-- TODO 结合这个和maven做笔记，把maven笔记尽量补全 -->
+    <!-- TODO 资源配置文件的笔记补全 -->
+</project>

@@ -16,6 +16,12 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>my-shop-spring-boot-security-oauth2-dependencies</module>
+        <module>my-shop-spring-boot-security-oauth2-commons</module>
+        <module>my-shop-spring-boot-security-oauth2-domain</module>
+        <module>my-shop-spring-boot-security-oauth2-web-admin</module>
+        <module>my-shop-spring-boot-security-oauth2-web-api</module>
+        <module>my-shop-spring-boot-security-oauth2-web-ui</module>
     </modules>
 
 </project>
