@@ -1,0 +1,4 @@
+1. 检查代码中的 todo 提示来获取 对应的意见
+
+2. Spring Security oAuth2 可以的化，使用JWT实现非对称加密
+
