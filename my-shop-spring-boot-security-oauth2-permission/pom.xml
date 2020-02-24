@@ -10,11 +10,8 @@
         <relativePath>../my-shop-spring-boot-security-oauth2-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>my-shop-spring-boot-security-oauth2-web-admin</artifactId>
+    <artifactId>my-shop-spring-boot-security-oauth2-permission</artifactId>
     <packaging>jar</packaging>
-
-    <name>my-shop-spring-boot-security-oauth2-web-admin</name>
-    <description></description>
 
     <licenses>
         <license>
@@ -30,6 +27,9 @@
             <email>782272323@qq.com</email>
         </developer>
     </developers>
+
+    <name>my-shop-spring-boot-security-oauth2-permission</name>
+    <description></description>
 
     <dependencies>
         <!-- Project Begin -->
@@ -49,17 +49,34 @@
         </dependency>
         <!-- Spring Boot End -->
 
+        <!-- Spring Security oAuth2 Begin -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-rsa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+        <!-- Spring Security oAuth2 End -->
 
     </dependencies>
 
     <build>
         <plugins>
-            <!-- 找启动类 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>learn.lhb.my.shop.spring.boot.security.oauth2.web.admin.WebAdminApplication</mainClass>
+                    <mainClass>learn.lhb.my.shop.spring.boot.security.oauth2.permission.PermissionApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,0 +1,33 @@
+org.springframework.security:spring-security-rsa:1.0.7.RELEASE
+
+org.springframework.boot:spring-boot-starter-security:2.1.6.RELEASE
+
+org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.0.RELEASE
+
+org.springframework.security:spring-security-crypto:5.1.5.RELASE
+
+
+<!-- Spring Security -->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-rsa</artifactId>
+    <version>1.0.7.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+    <version>2.1.6.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.security.oauth.boot</groupId>
+    <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+    <version>2.1.10.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-crypto</artifactId>
+    <version>5.1.5.RELEASE</version>
+</dependency>

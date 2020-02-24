@@ -16,6 +16,21 @@
     <name>my-shop-spring-boot-security-oauth2-domain</name>
     <description></description>
 
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>lianghongbin</id>
+            <name>Herbie Leung</name>
+            <email>782272323@qq.com</email>
+        </developer>
+    </developers>
+
     <dependencies>
 
     </dependencies>

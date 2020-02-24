@@ -17,6 +17,21 @@
     <name>my-shop-spring-boot-security-oauth2-dependencies</name>
     <inceptionYear>2020-Now</inceptionYear>
 
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>lianghongbin</id>
+            <name>Herbie Leung</name>
+            <email>782272323@qq.com</email>
+        </developer>
+    </developers>
+
     <!-- 版本号托管 -->
     <properties>
         <!-- Environment Settings 环境配置 -->
@@ -25,16 +40,62 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><!-- 编码 -->
 
         <!-- Spring Settings 统一的依赖管理 -->
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <spring-security-rsa.version>1.0.7.RELEASE</spring-security-rsa.version>
+        <spring-security-oauth2.version>2.1.0.RELEASE</spring-security-oauth2.version>
+        <spring-security-crypto.version>5.1.5.RELEASE</spring-security-crypto.version>
 
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <!-- Spring Boot Begin -->
-
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!-- 单元测试 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>test</scope>
+            </dependency>
             <!-- Spring Boot End -->
 
-            <!-- 单元测试 -->
+            <!-- Spring Security oAuth2 Begin -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-rsa</artifactId>
+                <version>${spring-security-rsa.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${spring-security-oauth2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-crypto</artifactId>
+                <version>${spring-security-crypto.version}</version>
+            </dependency>
+            <!-- Spring Security oAuth2 End -->
 
         </dependencies>
 

@@ -13,6 +13,21 @@
     <artifactId>my-shop-spring-boot-security-oauth2-web-api</artifactId>
     <packaging>jar</packaging>
 
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>lianghongbin</id>
+            <name>Herbie Leung</name>
+            <email>782272323@qq.com</email>
+        </developer>
+    </developers>
+
     <name>my-shop-spring-boot-security-oauth2-web-api</name>
     <description></description>
 
