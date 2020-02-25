@@ -23,10 +23,6 @@ export default new Router({
     {
       name: 'Login', path: '/login', component: Login, meta: {title: '登录'}
     },
-    // 登录
-    // {
-    //   name: 'Login', path: '/', component: Login, meta: {title: '登录'}
-    // },
     // 首页
     {
       name: 'Main', path: '/main', component: Main, meta: {title: '首页'},

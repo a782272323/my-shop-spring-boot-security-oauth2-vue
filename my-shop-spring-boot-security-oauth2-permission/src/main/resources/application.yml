@@ -1,2 +1,16 @@
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:1111/oauth/token # 获取 access_token
+      user-authorization-uri: http://localhost:1111/oauth/authorize # 获取授权码
+    resource:
+      token-info-uri: http://localhost:1111/oauth/check_token
+
+# 服务端口
 server:
   port: 1111
+  # 上下文路径
+  server:
+    context-path: /auth

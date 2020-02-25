@@ -8,6 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 /**
  * 配置认证服务器
@@ -23,6 +24,25 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
+    /**
+     * 配置令牌端点(Token Endpoint)的安全约束.
+     *
+     * @param oauthServer
+     * @throws Exception
+     */
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+        oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
+    }
+
+    /**
+     * 配置客户端详情服务（ClientDetailsService）
+     * 客户端详情信息在这里进行初始化
+     * 通过数据库来存储调取详情信息()
+     *
+     * @param clients
+     * @throws Exception
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // 配置客户端
