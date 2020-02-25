@@ -3,11 +3,19 @@
     <router-view/>
   </div>
 </template>
-
 <script>
 
 export default {
   name: 'App',
+    mounted() {
+      window.addEventListener("unload",this.saveState);
+    },
+    methods:  {
+      saveState: function () {
+          sessionStorage.setItem("state",JSON.stringify(this.$store.state.User));
+
+      }
+    }
 }
 </script>
 

@@ -1,0 +1,25 @@
+{
+  "name": "梁鸿斌",
+  "url": "http://www.782272323.cn:6001",
+  "page": 88,
+  "isNonProfit": true,
+  "address": {
+    "street": "人和街51号",
+    "city": "广东湛江",
+    "country": "中国"
+  },
+  "links": [
+    {
+      "name": "Google",
+      "url": "http://www.Google.com"
+    },
+    {
+      "name": "百度",
+      "url": "http://www.baidu.com"
+    },
+    {
+      "name": "SoSo",
+      "url": "http://www.SoSo.com"
+    }
+  ]
+}

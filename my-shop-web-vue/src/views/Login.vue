@@ -1,28 +1,42 @@
 <template>
   <div>
-    <el-form ref="loginForm" :model="form" :rules="rules" label-width="80px" class="login-box">
-      <h3 class="login-title">欢迎登录</h3>
-      <el-form-item label="账号" prop="username">
-        <el-input type="text" placeholder="请输入账号" v-model="form.username"/>
+    <el-form ref="form" :model="form" :rules="rules" label-width="80px" class="login-box">
+      <h1 class="login-title">欢迎登录</h1>
+      <el-form-item label="账号" class="login-title" prop="username">
+        <el-input v-model="form.username"></el-input>
       </el-form-item>
-      <el-form-item label="密码" prop="password">
-        <el-input type="password" placeholder="请输入密码" v-model="form.password"/>
+      <el-form-item label="密码" class="login-title" prop="password">
+        <el-input type="password" v-model="form.password"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" v-on:click="onSubmit('loginForm')">登录</el-button>
+        <el-button type="primary" @click="login('form')">登录</el-button>
       </el-form-item>
     </el-form>
-    <el-dialog
-      title="温馨提示"
-      :visible.sync="dialogVisible"
-      width="30%"
-      :before-close="handleClose">
-      <span>请输入账号和密码</span>
-      <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-      </span>
-    </el-dialog>
   </div>
+<!--  <div>-->
+<!--    <el-form ref="loginForm" :model="form" :rules="rules" label-width="80px" class="login-box">-->
+<!--      <h3 class="login-title">欢迎登录</h3>-->
+<!--      <el-form-item label="账号" prop="username">-->
+<!--        <el-input type="text" placeholder="请输入账号" v-model="form.username"/>-->
+<!--      </el-form-item>-->
+<!--      <el-form-item label="密码" prop="password">-->
+<!--        <el-input type="password" placeholder="请输入密码" v-model="form.password"/>-->
+<!--      </el-form-item>-->
+<!--      <el-form-item>-->
+<!--        <el-button type="primary" v-on:click="onSubmit('loginForm')">登录</el-button>-->
+<!--      </el-form-item>-->
+<!--    </el-form>-->
+<!--    <el-dialog-->
+<!--      title="温馨提示"-->
+<!--      :visible.sync="dialogVisible"-->
+<!--      width="30%"-->
+<!--      :before-close="handleClose">-->
+<!--      <span>请输入账号和密码</span>-->
+<!--      <span slot="footer" class="dialog-footer">-->
+<!--        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>-->
+<!--      </span>-->
+<!--    </el-dialog>-->
+<!--  </div>-->
 </template>
 <script>
     export default {
@@ -43,18 +57,32 @@
                     ]
                 },
                 // 对话框显示和隐藏
-                dialogVisible: false
+                // dialogVisible: false
             }
         },
         methods: {
             onSubmit(formName) {
                 // 为表单绑定验证功能
                 this.$refs[formName].validate((valid) => {
+                    // 验证成功跳转表单页
                     if (valid) {
+                        sessionStorage.setItem("isLogin", "true");
+                        this.$store.dispatch("asyncUpdateUser", this.form);
+                        this.$message({
+                            showClose: false,
+                            type: "success",
+                            message: '登录成功'
+                        });
                         // 使用 vue-router 路由到指定页面，该方式称之为编程式导航
                         this.$router.push("/main");
-                    } else {
-                        this.dialogVisible = true;
+                    }
+                    // 登录验证失败
+                    else {
+                        this.$message({
+                            showClose: false,
+                            type: "error",
+                            message: '请您输入正确的账户密码'
+                        });
                         return false;
                     }
                 });
