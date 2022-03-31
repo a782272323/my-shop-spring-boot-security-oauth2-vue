@@ -40,7 +40,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><!-- 编码 -->
 
         <!-- Spring Settings 统一的依赖管理 -->
-        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
         <spring-security-rsa.version>1.0.7.RELEASE</spring-security-rsa.version>
         <spring-security-oauth2.version>2.1.0.RELEASE</spring-security-oauth2.version>
         <spring-security-crypto.version>5.1.5.RELEASE</spring-security-crypto.version>
